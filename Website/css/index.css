@@ -109,7 +109,11 @@ right: 10px;
 
 /* Style the active slider button */
 .slider-button.active {
-background-color: #4CAF50;
+background-color: rgb(76, 175, 80);
+}
+
+.slider-button:hover{
+  background-color: rgba(76,175,80,.5);
 }
 
 /* Style the download button */
