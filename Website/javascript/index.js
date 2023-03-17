@@ -14,3 +14,17 @@ function closeNavOnClickOutsideOrX(event) {
     closeNav();
   }
 }
+
+// downloading image
+function downloadImage(){
+  const img = document.getElementsByClassName('active-img');
+  const imgPath = img[0].getAttribute('src');
+  const fileName = getFileName(imgPath);
+  
+  saveAs(imgPath, fileName);
+}
+
+// Getting the filename from src
+function getFileName(str){
+  return str.substring(str.lastIndexOf('/')+1);
+}

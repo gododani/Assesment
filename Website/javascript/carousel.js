@@ -7,9 +7,11 @@ let index = 0;
 function updateCarousel() {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
+    slides[i].classList.remove('active-img');
     dots[i].classList.remove('active');
   }
   slides[index].style.display = 'block';
+  slides[index].classList.add('active-img');
   dots[index].classList.add('active');
 }
 
