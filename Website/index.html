@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
+</head>
+<body>
+     <!-- Navbar -->
+    <div class="navbar">
+        <button class="menu-button" onclick="openNav()">Menu</button>
+        <img class="logo" src="./assets/images/Logo/logo.jpg" alt="Logo">
+        <button class="login-button" onclick="showLoginModal()">Login</button>
+    </div>
+
+    <!-- Side Navigation -->
+    <div id="sidenav" class="sidenav">
+      <a href="#" class="sidenav-close" onclick="closeNav()">&times;</a>
+      <a class="sidenav-button rounded" href="#">Home</a>
+      <a class="sidenav-button rounded" href="#">About</a>
+      <a class="sidenav-button rounded" href="#">Services</a>
+      <a class="sidenav-button rounded" href="#">Contact</a>
+    </div>
+  
+  <!-- Images -->
+  <div class="slider">
+		<div class="slides">
+			<img src="./assets/images/Img/img1.jpg" alt="Image 1" class="slide main-image">
+			<img src="./assets/images/Img/img2.jpg" alt="Image 2" class="slide main-image">
+			<img src="./assets/images/Img/img3.jpg" alt="Image 3" class="slide main-image">
+			<img src="./assets/images/Img/img4.jpg" alt="Image 4" class="slide main-image">
+      <img src="./assets/images/Img/img5.jpg" alt="Image 5" class="slide main-image">
+		</div>
+	</div>
+  
+  <!-- Image Slider -->
+  <div class="slider-container">
+    <div class="slider-arrow left prev">&#10094;</div>
+    <div class="slider-arrow right next">&#10095;</div>
+    <div class="slider-buttons">
+        <span class="slider-button active"></span>
+        <span class="slider-button"></span>
+        <span class="slider-button"></span>
+        <span class="slider-button"></span>
+        <span class="slider-button"></span>
+    </div>
+  </div>
+
+  <!-- Download Button -->
+  <button class="download-button">Download</button>
+
+  <!-- Login Modal -->
+  <div class="modal" id="modal">
+    <form method="post"> 
+      <div class="container">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="username" name="username" required>
+    
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" name="password" required>
+    
+        <button class="loginButton">Login</button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Footer -->
+  <div class="footer">
+    <p>Contact Us: 123-456-7890 | email@example.com</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../Server/server.js"></script>
+  <script src="./javascript/index.js"></script>
+  <script src="./javascript/carousel.js"></script>
+  <script src="./javascript/modal.js"></script>
+</body>
+</html>

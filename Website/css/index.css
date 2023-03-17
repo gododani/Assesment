@@ -1,0 +1,204 @@
+/* Style the body */
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Style the navbar */
+.navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  z-index: 1;
+}
+
+/* Style the logo */
+.logo {
+  display: inline-block;
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* Style the login button */
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 25px;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style the menu button */
+.menu-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style the image */
+.main-image {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
+  top: 0;
+}
+
+/* Style the arrow buttons */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* Style the left arrow button  */
+.slider-arrow.left {
+left: 10px;
+}
+
+/* Style the right arrow button  */
+.slider-arrow.right {
+right: 10px;
+}
+
+/* slider buttons */
+.slider-buttons{
+  position: absolute;
+  width: 100%;
+  padding: 5px;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 350px;
+  background-color: rgba(0,0,0,.3);
+}
+
+/* Style the slider buttons */
+.slider-button {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Style the active slider button */
+.slider-button.active {
+background-color: #4CAF50;
+}
+
+/* Style the download button */
+.download-button {
+  position: absolute;
+  width: 150px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-75px);
+  padding: 10px 20px;
+  margin-bottom: 300px;
+  background-color: transparent;
+  color: black;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style the sidenav */
+.sidenav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  width: 150px;
+  height: 100%;
+  color: #fff;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style the sidenav links */
+.sidenav a{
+  text-decoration: none;
+}
+
+/* Style the sidenav close icon */
+.sidenav-close {
+  position: absolute;
+  top: 0;
+  color: white;
+  text-decoration: none;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+/* Style the hover of the sidenav close icon */
+.sidenav-close:hover {
+color: #f1f1f1;
+}
+
+/* Style the sidenav when open */
+.sidenav.open {
+left: 0;
+}
+
+/* Style the sidenav button */
+.sidenav-button {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #4CAF50;
+}
+
+/* Style the rounded sidenav buttons */
+.sidenav-button.rounded {
+  margin: 1rem auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the footer */
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
