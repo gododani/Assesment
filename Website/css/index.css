@@ -196,7 +196,7 @@ left: 0;
   position: absolute;
   width: 100%;
   bottom: 0;
+  padding-left: 2rem;
   background-color: #333;
   color: #fff;
-  text-align: center;
 }
