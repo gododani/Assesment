@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({
 app.post('/',function(req,res){
     const username = req.body.username;
     const password = req.body.password;
-    const htmlData = username == adminUsername && password == adminPassword ? 'Login succesful' : 'Login failed';
-    res.send(htmlData);
+    username == adminUsername && password == adminPassword 
+    ? res.redirect('/?login=' + 'succesful' + '&name=' + username)
+    : res.redirect('/?login=' + "failed");
 });

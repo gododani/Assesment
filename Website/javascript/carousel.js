@@ -2,6 +2,7 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const slides = document.querySelectorAll('.slides img');
 const dots = document.querySelectorAll('.slider-buttons span');
+const imgText = document.getElementById('img-text');
 let index = 0;
 
 function updateCarousel() {
@@ -13,6 +14,7 @@ function updateCarousel() {
   slides[index].style.display = 'block';
   slides[index].classList.add('active-img');
   dots[index].classList.add('active');
+  imgText.innerHTML = slides[index].getAttribute("name");
 }
 
 function nextSlide() {

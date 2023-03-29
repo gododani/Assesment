@@ -7,62 +7,75 @@
     <title>Assesment</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <script src="https://kit.fontawesome.com/abc83d5d1c.js" crossorigin="anonymous"></script>
 </head>
 <body>
      <!-- Navbar -->
-    <div class="navbar">
-        <button class="menu-button" onclick="openNav()">Menu</button>
+    <nav class="navbar">
+        <button class="menu-button" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
         <img class="logo" src="./assets/images/Logo/logo.jpg" alt="Logo">
         <button class="login-button" onclick="showLoginModal()">Login</button>
-    </div>
+    </nav>
 
     <!-- Side Navigation -->
     <div id="sidenav" class="sidenav">
       <a href="#" class="sidenav-close" onclick="closeNav()">&times;</a>
-      <a class="sidenav-button rounded" href="#">Home</a>
-      <a class="sidenav-button rounded" href="#">About</a>
-      <a class="sidenav-button rounded" href="#">Services</a>
-      <a class="sidenav-button rounded" href="#">Contact</a>
+      <div>
+        <a class="sidenav-button rounded" href="#"><i class="fa-solid fa-house fa-xl"></i></a>
+        <p>Home</p>
+      </div>
+      <div>
+        <a class="sidenav-button rounded" href="#"><i class="fa-solid fa-heart fa-xl"></i></a>
+        <p>Favourite</p>
+      </div>
+      <div>
+        <a class="sidenav-button rounded" href="#"><i class="fa-solid fa-plus fa-xl"></i></a>
+        <p>Add</p>
+      </div>
     </div>
-  
+  <div id="loginInfo"></div>
   <!-- Images -->
-  <div class="slider">
+  <div class="slider" id="slider">
 		<div class="slides">
-			<img src="./assets/images/Img/img1.jpg" alt="Image 1" class="slide main-image">
-			<img src="./assets/images/Img/img2.jpg" alt="Image 2" class="slide main-image">
-			<img src="./assets/images/Img/img3.jpg" alt="Image 3" class="slide main-image">
-			<img src="./assets/images/Img/img4.jpg" alt="Image 4" class="slide main-image">
-      <img src="./assets/images/Img/img5.jpg" alt="Image 5" class="slide main-image">
+			<img src="./assets/images/Img/img1.jpg" alt="Image 1" name="img1" class="slide main-image fade">
+			<img src="./assets/images/Img/img2.jpg" alt="Image 2" name="img2" class="slide main-image fade">
+			<img src="./assets/images/Img/img3.jpg" alt="Image 3" name="img3" class="slide main-image fade">
+			<img src="./assets/images/Img/img4.jpg" alt="Image 4" name="img4" class="slide main-image fade">
+      <img src="./assets/images/Img/img5.jpg" alt="Image 5" name="img5" class="slide main-image fade">
 		</div>
 	</div>
   
   <!-- Image Slider -->
   <div class="slider-container">
-    <div class="slider-arrow left prev">&#10094;</div>
-    <div class="slider-arrow right next">&#10095;</div>
+    <div class="slider-arrow left prev" id="left">&#10094;</div>
+    <div class="slider-arrow right next" id="right">&#10095;</div>
     <div class="slider-buttons">
         <span class="slider-button active"></span>
         <span class="slider-button"></span>
         <span class="slider-button"></span>
         <span class="slider-button"></span>
         <span class="slider-button"></span>
+        <div id="img-text"></div>
     </div>
   </div>
 
   <!-- Download Button -->
-  <button class="download-button" onclick="downloadImage()">Download</button>
+  <button class="download-button" id="download-button" onclick="downloadImage()">Download</button>
 
   <!-- Login Modal -->
   <div class="modal" id="modal">
     <form method="post">
       <div class="container">
+        <h2>Login</h2>
         <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" id="username" name="username" required>
     
         <label for="password"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" id="password" name="password" required>
-    
-        <button class="loginButton">Login</button>
+        <div class="loginButtons">
+          <p id="closeLoginModal">Close</p>
+          <button class="loginButton">Login</button>
+        </div>
       </div>
     </form>
   </div>

@@ -17,6 +17,20 @@ form {
   width: 25%;
   margin: 25vh auto;
 }
+
+form .loginButtons{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 10px;
+}
+
+form .loginButtons p{
+  display: flex;
+  align-self: center;
+  font-size: larger;
+  cursor: pointer;
+}
   
 /* Style the form inputs */
 input[type=text], input[type=password] {
@@ -35,13 +49,14 @@ form label{
 
 /* Set a style for login button */
 form .loginButton {
-  background-color: #04AA6D;
+  background-color: rgb(118,57,201);
   color: white;
-  padding: 14px 20px;
+  padding: 1rem;
   margin: 8px 0;
   border: none;
+  border-radius: 7px;
   cursor: pointer;
-  width: 100%;
+  width: 70px;
 }
 
 /* Add a hover effect for login button */
@@ -54,4 +69,8 @@ form .container {
   background-color: white;
   padding: 16px;
   border-radius: 10px;
+}
+
+h2{
+  text-align: center;
 }

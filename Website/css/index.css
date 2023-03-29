@@ -2,25 +2,26 @@
 body{
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* Style the navbar */
 .navbar {
   position: absolute;
   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: rgb(245,244,246);
+  color: white;
   z-index: 1;
 }
 
 /* Style the logo */
 .logo {
   display: inline-block;
-  height: 50px;
+  height: inherit;
   margin: 0 auto;
 }
 
@@ -29,7 +30,7 @@ body{
   display: inline-block;
   padding: 10px 20px;
   margin-right: 1rem;
-  background-color: #4CAF50;
+  background-color: rgb(118,57,201);
   border: none;
   color: #fff;
   font-size: 16px;
@@ -39,24 +40,32 @@ body{
 
 /* Style the menu button */
 .menu-button {
-  display: inline-block;
+  display: flex;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(118,57,201);
   border: none;
   color: #fff;
   font-size: 16px;
   margin-left: 1rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style the image */
 .main-image {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100vh;
   object-fit: fill;
   top: 0;
+}
+
+.slider, .left{
+  transition: 0.5s;
 }
 
 /* Style the arrow buttons */
@@ -66,7 +75,7 @@ body{
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-color: #4CAF50;
+  background-color: rgb(118,57,201);
   color: #fff;
   text-align: center;
   line-height: 30px;
@@ -88,7 +97,12 @@ right: 10px;
 /* slider buttons */
 .slider-buttons{
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   width: 100%;
+  height: 70px;
   padding: 5px 0;
   bottom: 27%;
   text-align: center;
@@ -100,19 +114,35 @@ right: 10px;
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin: 0 5px;
   background-color: #333;
   border-radius: 50%;
   cursor: pointer;
 }
 
+.fade{
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade{
+  from {opacity: .2;}
+  to {opacity: 1;}
+}
+
 /* Style the active slider button */
 .slider-button.active {
-background-color: rgb(76, 175, 80);
+background-color: rgb(118,57,201);
 }
 
 .slider-button:hover{
-  background-color: rgba(76,175,80,.5);
+  background-color: rgba(118,57,201,.5);
+}
+
+#img-text{
+  position: absolute; 
+  right: 25%; 
+  color: white;
+  font-size: x-large;
 }
 
 /* Style the download button */
@@ -132,15 +162,16 @@ background-color: rgb(76, 175, 80);
 
 /* Style the sidenav */
 .sidenav {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: -250px;
-  width: 150px;
+  opacity: 0;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 0;
   height: 100vh;
   color: #fff;
-  background-color: #333;
-  transition: all 0.3s ease-in-out;
+  background-color: rgb(251,250,251);
+  transition: width 0.5s;
+  transition: opacity 0.3s;
 }
 
 /* Style the sidenav links */
@@ -148,21 +179,31 @@ background-color: rgb(76, 175, 80);
   text-decoration: none;
 }
 
+.sidenav i{
+  width: 50px;
+  height: auto;
+}
+
+.sidenav p{
+  color: black;
+  text-align: center;
+  font-size: larger;
+  margin: 0 auto;
+}
+
 /* Style the sidenav close icon */
 .sidenav-close {
   position: absolute;
   top: 0;
-  color: white;
-  text-decoration: none;
+  color: black;
   right: 10px;
   font-size: 36px;
-  margin-left: 50px;
   cursor: pointer;
 }
 
 /* Style the hover of the sidenav close icon */
 .sidenav-close:hover {
-color: #f1f1f1;
+color: rgb(118,57,201);
 }
 
 /* Style the sidenav when open */
@@ -175,12 +216,13 @@ left: 0;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: rgb(118,57,201);
 }
 
 /* Style the rounded sidenav buttons */
 .sidenav-button.rounded {
-  margin: 1rem auto;
+  display: none;
+  margin: 1rem auto 10px auto;
   border-radius: 50%;
   text-align: center;
   width: 30px;
@@ -191,15 +233,24 @@ left: 0;
   align-items: center;
 }
 
+.sidenav-button.rounded:hover{
+  opacity: 0.7;
+}
+
 /* Style the footer */
 .footer {
+  display: flex;
   position: absolute;
   width: 100%;
+  height: 100px;
   bottom: 0;
-  background-color: #333;
-  color: #fff;
+  background-color: rgb(245,244,246);;
+  z-index: 2;
+  align-items: center;
 }
 
 .footer-text{
+  font-size: 30px;
   padding-left: 2rem;
+  color: black;
 }
