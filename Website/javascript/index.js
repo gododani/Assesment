@@ -46,7 +46,11 @@ const failedLogin = `<div class='login' style='position: absolute; z-index: 10;l
 if (data =="succesful") document.getElementById('loginInfo').innerHTML = succesfulLogin;
 if (data == "failed") document.getElementById('loginInfo').innerHTML = failedLogin;
 
+function goToHome(){
+  document.location.href="/";
+}
+
 function closeLoginInfo(){
   document.getElementById('loginInfo').style.display = 'none';
-  document.location.href="/";
+  goToHome();
 }
